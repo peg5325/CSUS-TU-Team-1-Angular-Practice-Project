@@ -1,5 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business-Communication-Platform</title>
+</head>
+
+<body>
+
+    <div class="container-fluid ">
+        <div class="row h-100">
+            <div id="navigation-col" class="col-4 col-md-3">
+                <div id="navigation-items">
+                    <h3>Channels</h3>
+                    <p class="pl-3 pt-2 pb-2 pr-2 m-0 navigation-item">General</p>
+                    <p class="pl-3 pt-2 pb-2 pr-2 m-0 navigation-item">Marketing</p>
+                    <p class="pl-3 pt-2 pb-2 pr-2 m-0 navigation-item">Operations</p>
+                    <p class="pl-3 pt-2 pb-2 pr-2 m-0 navigation-item">Random</p>
+                    <p class="pl-3 pt-2 pb-2 pr-2 m-0 navigation-item">Standups</p>
+                    <br>
+                    <div class="col-3">
+                    <h3 style="text-size-adjust: inherit;">Direct Messages</h3>
+                    </div>
+                    <p class="pl-3 pt-2 pb-2 pr-2 m-0 navigation-item">Connor Steele</p>
+                    <p class="pl-3 pt-2 pb-2 pr-2 m-0 navigation-item">Taylor LaMar</p>
+                    <p class="pl-3 pt-2 pb-2 pr-2 m-0 navigation-item">Martyn Lmao</p>
+                </div>
+            </div>
+
+            <div class="col-8 col-md-9 chat-container">
+                <h3>Business Communication Platform</h3>
+
+                <div id="messages-container">
+                    <div class="message"> <!--TODO-->
+                        <div class="row mt-3"> <!--! This block is for both image, name, time and date: make this injectable from somewhere-->
+                            <div class="col col-avatar ml-3">  
+                                <img src="assets/Luffy.jpg" alt="connor" class="avatar col-avatar">
+                            </div>
+                            <div class="col">
+                                <div class="col">
+                                    <h5>Connor Steele</h5>
+                                </div>
+                                <div class="col">
+                                    <p>Dec 30 2020 at 4:12pm</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="ml-3">I'm getting 403 errors on the API. Does anyone know what's going on?</p> <!--!Here is the line for message data-->
+                    </div>
+
+                    <div class="message"> <!--TODO-->
+                        <div class="row mt-3"> <!--! This is for both image, name, time and date- make this injectable from somewhere-->
+                            <div class="col col-avatar ml-3">
+                                <img src="assets/Zoro.jpg" alt="connor" class="avatar col-avatar">
+                            </div>
+                            <div class="col">
+                                <div class="col">
+                                    <h5>Martyn</h5>
+                                </div>
+                                <div class="col">
+                                    <p>Dec 30 2020 at 4:27pm</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="ml-3">Hey Connor, I was rebooting the server. Try it now and lemme know if you run
+                            into any more issues</p> <!--!Here is the line for message data-->
+                    </div>
+
+                    <div class="message"> <!--TODO-->
+                        <div class="row mt-3"> <!--! This is for both image, name, time and date- make this injectable from somewhere-->
+                            <div class="col col-avatar ml-3">
+                                <img src="assets/Sanji.jpg" alt="connor" class="avatar col-avatar">
+                            </div>
+                            <div class="col">
+                                <div class="col">
+                                    <h5>Dr. Kim</h5>
+                                </div>
+                                <div class="col">
+                                    <p>Dec 30 2020 at 4:29pm</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="ml-3">It works now! Thanks!</p> <!--!Here is the line for message data-->
+                    </div>
+                </div>
+
+                <!-- Our problem  -->
+                <div class="row message-input-row align-items-end">
+                    <div  class="col col-message">
+                        <textarea id="input-container" class="form-control" placeholder="Enter your message here"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- End of Row -->
+        
+    </div>
+
+
 <p>Hello World!!</p>
 
+<div class = "main-rap" *ngFor="let image of imageList" >
+    <img src={{image}}>
 
-<!-- push test -->
-<!-- one more test -->
+ 
+   
+</div>
+
+<div class= "second-rap" *ngFor="let speak of messageList">
+    <h1>{{speak}}</h1>
+    
+
+
+
+</div>
+
+<!-- <app-photo
+    *ngFor="let speak of messageList"
+    [message] = "speak"></app-photo> -->
+
+</body>
+
+</html>
