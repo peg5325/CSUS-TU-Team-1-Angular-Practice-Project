@@ -99,26 +99,20 @@
     </div>
 
 
-<p>Hello World!!</p>
 
+
+<!-- The div blocks below are just practice for final version of project feel free to delete-->
+<p>Hello World!!</p>
 <div class = "main-rap" *ngFor="let image of imageList" >
     <img src={{image}}>
-
- 
-   
 </div>
 
 <div class= "second-rap" *ngFor="let speak of messageList">
     <h1>{{speak}}</h1>
-    
-
-
-
+    <!-- <app-photo
+        *ngFor="let speak of messageList"
+        [message] = "speak"></app-photo> -->
 </div>
-
-<!-- <app-photo
-    *ngFor="let speak of messageList"
-    [message] = "speak"></app-photo> -->
 
 </body>
 
