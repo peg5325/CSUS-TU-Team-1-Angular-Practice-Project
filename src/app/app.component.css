@@ -1,3 +1,7 @@
+* {
+  font-style: arial;
+}
+
 .main-rap{
     border: 8px dashed black
 }
@@ -13,6 +17,12 @@ body {
   .container-fluid {
     height: 100vh;
   }
+
+  #navigation-items {
+    display: flex;
+    flex-direction: column;
+  }
+
   #navigation-col {
     /* flex: 300px 0 0; */
     padding-top: 35px;
@@ -72,3 +82,18 @@ body {
     padding: 0;
   }
   
+  .chat-title {
+    display: flex;
+  }
+
+  .catagory-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+  }
+
+  .catagory-explain {
+    font-size: 20px;
+    color: gray;
+    margin-left: 12px;
+  }
