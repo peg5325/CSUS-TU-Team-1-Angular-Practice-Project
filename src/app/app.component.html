@@ -12,38 +12,38 @@
 
     <div class="container-fluid ">
         <div class="row h-100">
-            <div id="navigation-col" class="col-4 col-md-3">
+            <div id="navigation-col" class="col-4 col-md-3 col-sm-3">
                 <div id="navigation-items">
                     <h3>Channels</h3>
                     <span (click)="clickChannel({
                         name : 'General',
                         description : 'For general workspace conversations'
-                        })" class="pl-3 pt-2 pb-2 pr-2 m-0 navigation-item">
-                        General
-                    </span>
+                        })"
+                        class="pl-3 pt-2 pb-2 pr-2 m-0 navigation-item">General</span>
                     <span (click)="clickChannel({
                         name : 'Random',
-                        description : 'Random Channel'
-                        })" class="pl-3 pt-2 pb-2 pr-2 m-0 navigation-item">
-                        Random
-                    </span>
-                    <span 
-                    (click)="clickChannel({
+                        description : 'For Random Channel'
+                        })"
+                        class="pl-3 pt-2 pb-2 pr-2 m-0 navigation-item">Random</span>
+                    <span (click)="clickChannel({
                         name : 'Client Chat',
                         description : 'For Client Chat Channel'
-                        })" class="pl-3 pt-2 pb-2 pr-2 m-0 navigation-item">Client Chat</span>
+                        })"
+                        class="pl-3 pt-2 pb-2 pr-2 m-0 navigation-item">Client Chat</span>
                     <span (click)="clickChannel({
                         name : 'Internal Projects',
                         description : 'For Internal Projects Channel'
-                        })" class="pl-3 pt-2 pb-2 pr-2 m-0 navigation-item">Internal Projects</span>
+                        })"
+                        class="pl-3 pt-2 pb-2 pr-2 m-0 navigation-item">Internal Projects</span>
                     <span (click)="clickChannel({
                         name : 'Marketing',
                         description : 'For Marketing Channel'
-                        })" class="pl-3 pt-2 pb-2 pr-2 m-0 navigation-item">Marketing</span>
+                        })"
+                        class="pl-3 pt-2 pb-2 pr-2 m-0 navigation-item">Marketing</span>
                 </div>
             </div>
 
-            <div class="col-8 col-md-9 chat-container" class="AppComponent">
+            <div class="col-8 col-md-9 col-sm-9 chat-container" class="AppComponent">
                 <div class="chat-title">
                     <span class="catagory-name">#{{selectedChannel.name}}</span>
                     <p class="catagory-explain">{{selectedChannel.description}}</p>
@@ -65,7 +65,7 @@
                                 </div>
                                 <div class="col">
                                     <p>{{speak.dateTime | date: 'medium'}}</p>
-                                    <p></p>
+                                   
                                 </div>
                             </div>
                         </div>
@@ -136,10 +136,15 @@
         <img src={{speak.avatarURL}}>
         <h1>{{speak.username}}</h1>
         <p>{{speak.messageText}}</p>
+        <button (click) = "deleteItem(messageList)">Delete Item</button>
         <!-- <h1>{{Message.username}}</h1> -->
         <!-- <app-photo
         *ngFor="let speak of messageList"
         [message] = "speak"></app-photo> -->
+    </div>
+
+    <div>
+        {{myDate | date: 'medium'}}
     </div>
 
 </body>

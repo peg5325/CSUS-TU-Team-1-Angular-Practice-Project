@@ -15,8 +15,10 @@ import { DataRetrievalService } from '../data-retrieval.service';
 export class ChatComponent implements OnInit {
 
   currentUsername: string = "Default Username";
-  currentUserAvatarURL: string = "../assets/default-picture.jpg" //not working with default picture
-  currentIsEdited: Boolean = false;
+  currentUserAvatarURL: string = "../assets/Luffy.jpg" //not working with default picture
+  currentIsEdited: boolean = false;
+
+  currentDate = Date.now();
 
   user_messages: Message[] = [];
 

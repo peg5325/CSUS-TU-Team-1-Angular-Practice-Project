@@ -2,8 +2,9 @@ export interface Message {
     username: string; 
     avatarURL: string;
     messageText: string;
-    dateTime: string;
+    dateTime: any;
     edited: boolean;
-    // editedDateTime: Object
+    //editedDateTime: Object
 
 }
+

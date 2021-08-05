@@ -2,11 +2,10 @@
 
 <label>Text Chat: </label>
 
-<!-- <input
+<input
 #message
-(keyup.enter)="sendMsg({username: currentUsername, avatarURL: currentUserAvatarURL, messageText: message.value, edited: currentIsEdited}); message.value='' ">
-
+(keyup.enter)="sendMsg({username: currentUsername, avatarURL: currentUserAvatarURL, messageText: message.value, dateTime: this.currentDate, edited: currentIsEdited}); message.value='' ">
 <p *ngFor="let userMessage of user_messages">
     <img class="avatars" src={{userMessage.avatarURL}}>
-     {{userMessage.username}}: {{userMessage.messageText}}
-</p> -->
+     {{userMessage.username}}: {{userMessage.dateTime | date: 'medium'}}: {{userMessage.messageText}}
+</p>

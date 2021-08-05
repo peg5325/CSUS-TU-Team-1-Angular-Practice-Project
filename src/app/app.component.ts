@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 import { Message } from './message';
 import { Channel } from './channel';
 
 @Component({
-  selector: 'app-root', 
+  selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
@@ -13,10 +13,15 @@ export class AppComponent {
 
   luffy = "assets/luffy.png";
 
+  public channelMessages: any[] = [];
   public selectedChannel: Channel = {
     name: 'General',
-    description: 'General desc.'
+    description: 'For general workspace conversations'
   }
+
+  myDate = Date.now();
+
+
 
   messageList: Message[] = [
     {
@@ -37,7 +42,7 @@ export class AppComponent {
       username: "Sanji",
       avatarURL: "assets/Sanji.jpg",
       messageText: "It works now! Thanks!",
-      dateTime: "2021-08-04T03:17:28.808Z",
+      dateTime: this.myDate,
       edited: true
     },
 
@@ -50,62 +55,27 @@ export class AppComponent {
     'assets/Zoro.jpg',
   ];
 
+  @Output() deleteItemEvent = new EventEmitter<any>();
   constructor() { }
 
   clickChannel(channel: Channel) {
     this.selectedChannel = channel;
-
-    console.log(channel.name);
   };
 
-  printLists() {
+  tellToDeleteItem(item: any) {
+    this.deleteItemEvent.emit(item);
+  }
+
+  deleteItem(item: any){
+    let itemIndex =this.messageList.indexOf(item)
+    this.messageList.splice(itemIndex, 1);
 
   }
 
   ngOnInit() {
-
-
     for (let i = 0; i < this.messageList.length; i++) {
       console.log(this.imageList[i])
       console.log(this.messageList[i]);
     }
-
   }
 }
-// creat a message interface formatting your message objects
-// you want to create a single array of object
-/*
-[{
-  username: "Luffy",
-  avatarURL: "dfhsoidfso",
-  messageTexts: ["blah blah blah", "blahbla blah",
-  dateTime: dateObject or a string,
-  edited: true
-  editedDateTime: object
-
-},
-
-{
-  username: "Luffy",
-  avatarURL: "dfhsoidfso",
-  messageText: "blah blah blah",
-  dateTime: dateObject or a string,
-  edited: true
-  editedDateTime: object
-
-},
-
-{
-  username: "Luffy",
-  avatarURL: "dfhsoidfso",
-  messageText: "blah blah blah",
-  dateTime: dateObject or a string,
-  edited: true
-  editedDateTime: object
-
-}
-
-]
-
-
-*/
