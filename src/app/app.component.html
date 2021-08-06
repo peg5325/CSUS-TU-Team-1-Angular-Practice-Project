@@ -1,10 +1,104 @@
-<h1>{{title}}</h1>
+<div class="container-fluid ">
+    <div class="row h-100">
+        <div id="navigation-col" class="col-4 col-md-3 col-sm-3">
+            <div id="navigation-items">
+                <h3>Channels</h3>
+                
+                <span (click)="clickChannel({
+                            name : 'General',
+                            description : 'For general workspace conversations',
+                            index : 0
+                            })" class="pl-3 pt-2 pb-2 pr-2 m-0 navigation-item">General</span>
+                <span (click)="clickChannel({
+                            name : 'Random',
+                            description : 'For Random Channel',
+                            index : 1
+                            })" class="pl-3 pt-2 pb-2 pr-2 m-0 navigation-item">Random</span>
+                <span (click)="clickChannel({
+                            name : 'Client Chat',
+                            description : 'For Client Chat Channel',
+                            index : 2
+                            })" class="pl-3 pt-2 pb-2 pr-2 m-0 navigation-item">Client Chat</span>
+                <span (click)="clickChannel({
+                            name : 'Internal Projects',
+                            description : 'For Internal Projects Channel',
+                            index : 3
+                            })" class="pl-3 pt-2 pb-2 pr-2 m-0 navigation-item">Internal Projects</span>
+                <span (click)="clickChannel({
+                            name : 'Marketing',
+                            description : 'For Marketing Channel',
+                            index : 4
+                            })" class="pl-3 pt-2 pb-2 pr-2 m-0 navigation-item">Marketing</span>
+            </div>
+        </div>
 
-<nav>
-    <a routerLink="/dashboard">Dashboard</a>
-    <a routerLink="/heroes">Heroes</a>
-</nav>
+        <router-outlet></router-outlet>
 
-<router-outlet></router-outlet>
+        <div class="col-8 col-md-9 col-sm-9 chat-container" class="AppComponent">
+            <div class="chat-title">
+                <span class="catagory-name">#{{selectedChannel.name}}</span>
+                <p class="catagory-explain">{{selectedChannel.description}}</p>
+            </div>
 
-<app-messages></app-messages>
+
+            <div id="messages-container">
+                <div class="message" *ngFor="let speak of displayMessages">
+                    <!--TODO-->
+                    <div class="row mt-3">
+                        <!--! This block is for both image, name, time and date: make this injectable from somewhere-->
+                        <div class="col col-avatar ml-3">
+
+                            <img src={{speak.avatarURL}} alt="connor" class="avatar col-avatar">
+                        </div>
+                        <div class="col">
+                            <div class="col">
+                                <h5>{{speak.username}}</h5>
+                            </div>
+                            <div class="col">
+                                <p>{{speak.dateTime | date: 'medium'}}</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <p class="ml-3">{{speak.messageText}}</p>
+                    <!--!Here is the line for message data-->
+                    <button (click)="deleteItem(messageList)">Delete Item</button>
+
+                </div>
+
+            </div>
+
+            <!-- Our problem  -->
+            <div class="row message-input-row align-items-end">
+                <div class="col col-message">
+                    <textarea id="input-container" class="form-control"
+                        placeholder="Enter your message here"></textarea>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End of Row -->
+
+</div>
+
+<!-- The div blocks below are just practice for final version of project feel free to delete-->
+<p>Hello World!!</p>
+<!-- <div class = "main-rap" *ngFor="let image of imageList" >
+    <img src={{image}}>
+</div> -->
+
+<div class="second-rap" *ngFor="let speak of messageList">
+    <img src={{speak.avatarURL}}>
+    <h1>{{speak.username}}</h1>
+    <p>{{speak.messageText}}</p>
+    <button (click)="deleteItem(messageList)">Delete Item</button>
+    <!-- <h1>{{Message.username}}</h1> -->
+    <!-- <app-photo
+        *ngFor="let speak of messageList"
+        [message] = "speak"></app-photo> -->
+</div>
+
+<div>
+    {{myDate | date: 'medium'}}
+</div>
+
+<app-chat></app-chat>

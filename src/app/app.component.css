@@ -1,21 +1,99 @@
-/* AppComponent에 적용되는 CSS 스타일 */
-h1 {
-    margin-bottom: 0;
-  }
-  nav a {
-    padding: 1rem;
-    text-decoration: none;
-    margin-top: 10px;
-    display: inline-block;
-    background-color: #e8e8e8;
-    color: #3d3d3d;
-    border-radius: 4px;
+* {
+  font-style: arial;
+}
+
+.main-rap{
+    border: 8px dashed black
+}
+
+.second-rap{
+    border: 8px dotted greenyellow
+}
+
+body {
+    margin: 0;
   }
   
-  nav a:hover {
-    color: white;
-    background-color: #42545C;
+  .container-fluid {
+    height: 100vh;
   }
-  nav a.active {
-    background-color: black;
+
+  #navigation-items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #navigation-col {
+    /* flex: 300px 0 0; */
+    padding-top: 35px;
+    background-color: #dce7ef;
+  }
+  
+  .navigation-item:hover {
+    background-color: #c7d2dc;
+    border-radius: 5px;
+  }
+  
+  .chat-container {
+    padding-top: 35px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .col-avatar {
+    flex: 50px 0 0;
+    width: 50px;
+  }
+  
+  .avatar {
+    border-radius: 50%;
+  }
+  
+  .message {
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    margin-top: 15px;
+    background-color: #f6f8f9;
+  }
+  
+  #input-container {
+    /* position: fixed; */
+    height: 100px;
+    /* bottom: 0px; */
+    border: 2px solid #aaa;
+    border-radius: 4px;
+    margin-top: 10px;
+    outline: none;
+    /* padding: 15px; */
+    box-sizing: border-box;
+    transition: 0.3s;
+    justify-self: flex-end;
+  }
+  
+  .message-input-row {
+    align-self: flex-end;
+    flex-grow: 2;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+  
+  .col-message {
+    padding: 0;
+  }
+  
+  .chat-title {
+    display: flex;
+  }
+
+  .catagory-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+  }
+
+  .catagory-explain {
+    font-size: 20px;
+    color: gray;
+    margin-left: 12px;
   }
