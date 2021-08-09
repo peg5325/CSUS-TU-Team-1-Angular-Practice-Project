@@ -71,7 +71,15 @@
                         </div>
                         <p class="ml-3">{{speak.messageText}}</p>
                         <!--!Here is the line for message data-->
-                        <button (click) = "deleteItem(messageList)">Delete Item</button>
+                        <button (click) = "deleteItem(speak)">Delete Item</button>
+                        <!-- The below code was taken from https://codepen.io/msaetre/pen/mAtJF for displaying a trashcan button-->
+                        <div class="icon-trash" style="float: left" (click) = "deleteItem(speak)">
+                            <div class="trash-lid" style="background-color: gray"></div>
+                            <div class="trash-container" style="background-color: gray"></div>
+                            <div class="trash-line-1"></div>
+                            <div class="trash-line-2"></div>
+                            <div class="trash-line-3"></div>
+                          </div>
 
                     </div>
                     
@@ -102,7 +110,16 @@
         <img src={{speak.avatarURL}}>
         <h1>{{speak.username}}</h1>
         <p>{{speak.messageText}}</p>
-        <button (click) = "deleteItem(messageList)">Delete Item</button>
+        <button (click) = "deleteItem(messageList)" class="bi bi-trash" >Delete</button>
+        
+        <div class="icon-trash" style="float: left" (click) = "deleteItem(messageList)">
+            <div class="trash-lid" style="background-color: #2CC3B5"></div>
+            <div class="trash-container" style="background-color: #2CC3B5"></div>
+            <div class="trash-line-1"></div>
+            <div class="trash-line-2"></div>
+            <div class="trash-line-3"></div>
+          </div>
+          
         <!-- <h1>{{Message.username}}</h1> -->
         <!-- <app-photo
         *ngFor="let speak of messageList"
