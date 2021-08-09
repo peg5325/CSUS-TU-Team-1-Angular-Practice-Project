@@ -22,40 +22,6 @@ export class AppComponent {
     index : 0
   }
 
-  myDate = Date.now();
-
-  messageList: Message[] = [
-    {
-      username: "Luffy",
-      avatarURL: "assets/Luffy.jpg",
-      messageText: "I'm getting 403 errors on the API. Does anyone know what's going on?",
-      dateTime: "2021-08-04T03:17:28.808Z",
-      edited: true
-    },
-    {
-      username: "Zoro",
-      avatarURL: "assets/Zoro.jpg",
-      messageText: "Hey Connor, I was rebooting the server. Try it now and lemme know if you run into any more issues",
-      dateTime: "2021-08-04T03:17:28.808Z",
-      edited: true
-    },
-    {
-      username: "Sanji",
-      avatarURL: "assets/Sanji.jpg",
-      messageText: "It works now! Thanks!",
-      dateTime: this.myDate,
-      edited: true
-    },
-
-  ];
-
-  imageList: any[] = [
-
-    'assets/Luffy.jpg ',
-    'assets/Sanji.jpg',
-    'assets/Zoro.jpg',
-  ];
-
   @Output() deleteItemEvent = new EventEmitter<any>();
   constructor(private readonly messageService: MessageService) { }
 
@@ -74,10 +40,10 @@ export class AppComponent {
   }
 
   deleteItem(item: any){
-    let itemIndex =this.messageList.indexOf(item)
-    this.messageList.splice(itemIndex, 1);
-
+    let itemIndex =this.displayMessages.indexOf(item)
+    this.displayMessages.splice(itemIndex, 1);
   }
+    
 
 submitNewMessage(){
 // send the new message data to the messsage service, 
@@ -91,10 +57,39 @@ saveMessages(){
 
 }
   ngOnInit() {
-    for (let i = 0; i < this.messageList.length; i++) {
-      console.log(this.imageList[i])
-      console.log(this.messageList[i]);
-    }
+  
     this.fetchMessages(this.selectedChannel.index);
+
+
+
+    // this.getMessagesChat(); // part of text chat
   }
+
+
+
+
+
+
+
+
+
+
+  currentUsername: string = "Default Username";
+  currentUserAvatarURL: string = "../assets/Luffy.jpg" //not working with default picture
+  currentIsEdited: boolean = false;
+
+  currentDate = Date.now();
+
+  user_messages: Message[] = [];
+
+  sendMsg(tempMsg: Message) {
+    if(tempMsg) {
+      this.displayMessages.push(tempMsg)
+    }
+  }
+  
+  // getMessagesChat(): void {
+  //   this.user_messages = this.messageService.getMessages();
+  // }
+  
 }

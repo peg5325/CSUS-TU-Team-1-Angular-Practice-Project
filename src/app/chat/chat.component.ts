@@ -25,6 +25,7 @@ export class ChatComponent implements OnInit {
   sendMsg(tempMsg: Message) {
     if(tempMsg) {
       this.user_messages.push(tempMsg)
+
     }
   }
   

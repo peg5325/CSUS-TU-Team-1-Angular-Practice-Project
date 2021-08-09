@@ -1,3 +1,5 @@
+// USED BY CHAT COMPONENT
+
 import { Injectable } from '@angular/core';
 
 import { Message } from './message';
