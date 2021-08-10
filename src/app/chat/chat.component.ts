@@ -14,7 +14,7 @@ import { DataRetrievalService } from '../data-retrieval.service';
 })
 export class ChatComponent implements OnInit {
 
-  currentUsername: string = "Default Username";
+  currentUsername: string = "Anonymous";
   currentUserAvatarURL: string = "../assets/Luffy.jpg" //not working with default picture
   currentIsEdited: boolean = false;
 
