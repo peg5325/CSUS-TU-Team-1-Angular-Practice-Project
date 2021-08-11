@@ -1,7 +1,3 @@
-<p>chat works!</p>
-
-<label>Text Chat: </label>
-
 <input #message
     (keyup.enter)="sendMsg({username: currentUsername, avatarURL: currentUserAvatarURL, messageText: message.value, dateTime: this.currentDate, edited: currentIsEdited}); message.value='' ">
 <p *ngFor="let userMessage of user_messages">

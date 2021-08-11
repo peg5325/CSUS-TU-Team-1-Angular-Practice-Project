@@ -44,7 +44,6 @@ export class AppComponent {
     this.displayMessages.splice(itemIndex, 1);
   }
     
-
 submitNewMessage(){
 // send the new message data to the messsage service, 
 //Put the new message inside the messages array of the appropriate channel object
@@ -57,24 +56,11 @@ saveMessages(){
 
 }
   ngOnInit() {
-  
     this.fetchMessages(this.selectedChannel.index);
-
-
-
     // this.getMessagesChat(); // part of text chat
   }
 
-
-
-
-
-
-
-
-
-
-  currentUsername: string = "Default Username";
+  currentUsername: string = "Anonymous";
   currentUserAvatarURL: string = "../assets/Luffy.jpg" //not working with default picture
   currentIsEdited: boolean = false;
 
