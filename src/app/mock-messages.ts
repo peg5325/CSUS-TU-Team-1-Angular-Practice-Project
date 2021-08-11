@@ -1,3 +1,5 @@
+// NOT IN USE. MERGED TO MESSAGES ARRAY IN MESSAGE SERVICE
+// USED BY CHAT COMPONENT
 import { Message } from './message'
 
 export const USER_MESSAGES: Message[] = [

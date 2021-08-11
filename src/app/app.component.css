@@ -2,14 +2,6 @@
   font-style: arial;
 }
 
-.main-rap{
-    border: 8px dashed black
-}
-
-.second-rap{
-    border: 8px dotted greenyellow
-}
-
 body {
     margin: 0;
   }
@@ -84,11 +76,12 @@ body {
   
   .chat-title {
     display: flex;
+    align-items: center;
   }
 
   .catagory-name {
+    margin: 0;
     font-size: 20px;
-    font-weight: 600;
     color: black;
   }
 
@@ -98,6 +91,7 @@ body {
     margin-left: 12px;
   }
 
+ <<<<<<< HEAD 
   /*The below code for styling a trash can button came from the fallowing address
     https://codepen.io/msaetre/pen/mAtJF  */
 
