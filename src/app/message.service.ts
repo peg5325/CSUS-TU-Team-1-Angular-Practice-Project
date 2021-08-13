@@ -17,7 +17,14 @@ export class MessageService {
           messageText: "Here is General Channal",
           dateTime: "2021-08-04T03:17:28.808Z",
           edited: true
-        }
+        },
+        {
+          username: "Sanji",
+          avatarURL: "assets/Sanji.jpg",
+          messageText: "This channel is great for posts involving complex topics",
+          dateTime: "2021-08-04T03:17:50.808Z",
+          edited: true
+        },
       ]
     },
     {
@@ -30,7 +37,8 @@ export class MessageService {
           messageText: "Here is Random Channal",
           dateTime: "2021-08-04T03:17:28.808Z",
           edited: true
-        }
+        },
+      
       ]
     },
     {

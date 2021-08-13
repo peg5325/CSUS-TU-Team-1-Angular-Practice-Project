@@ -59,61 +59,40 @@
                             </div>
                         </div>
                     </div>
-                    <p class="ml-3 chat-area">{{speak.messageText}}</p>
-                    <!--!Here is the line for message data-->
-                    <div class="button-comp">
-                        <!-- <button (click)="deleteItem(speak)" class="btn btn-danger">del</button>   -->
-                
-                    <!-- The below code was taken from https://codepen.io/msaetre/pen/mAtJF for displaying a trashcan button-->
-                    <div class="icon-trash" style="float: left" (click) = "deleteItem(speak)">
+                    
+                    <div class="icon-trash" style="float: right" (click) = "deleteItem(speak)">
                         <div class="trash-lid" style="background-color: gray"></div>
                         <div class="trash-container" style="background-color: gray"></div>
                         <div class="trash-line-1"></div>
                         <div class="trash-line-2"></div>
                         <div class="trash-line-3"></div>
                     </div>
+                    <p class="ml-3 chat-area">{{speak.messageText}}</p>
+                   
+                    
 
-                    </div>
+                    
                 </div>
             </div>
 
-            <!-- Our problem  -->
+
             <div class="row message-input-row align-items-end">
-                <div class="col col-message">
-                        <!-- <label>Text Chat: </label> -->
-
-                        <!-- <input #message
-                            (keyup.enter)="sendMsg({username: currentUsername, avatarURL: currentUserAvatarURL, messageText: message.value, dateTime: this.currentDate, edited: currentIsEdited}); message.value='' "> -->
-
-                        <!-- THIS IS THE OLD HTML TEXT BOX -->
+                <div class="col col-message ">
+                                         
                         <textarea #message id="input-container" class="form-control"
-                            placeholder="Message #{{selectedChannel.name}}"  (keyup.enter)="sendMsg({username: currentUsername, avatarURL: currentUserAvatarURL, messageText: message.value, dateTime: this.currentDate, edited: currentIsEdited}); message.value=''"></textarea>
+                            placeholder="Message #{{selectedChannel.name}}"  (keyup.enter)="sendMsg({username: currentUsername, avatarURL: currentUserAvatarURL, messageText: message.value, dateTime: this.currentDate, edited: currentIsEdited}); message.value=''"></textarea>                    
                 </div>
             </div>
         </div>
     </div> <!-- End of Row -->
 </div>
 
-<!-- The div blocks below are just practice for final version of project feel free to delete-->
+<!-- The div blocks below are just practice for final version of project feel free to delete -->
 <!-- <p>Hello World!!</p> -->
-<!-- <div class = "main-rap" *ngFor="let image of imageList" >
-    <img src={{image}}>
-</div> -->
+ <!-- <div class = pad > 
+    <div class = "main-rap" >
+    <img src='assets/Luffy.jpg'>
+    <app-chat></app-chat>
+    </div>
+</div>   -->
 
-<!-- <div class="second-rap" *ngFor="let speak of messageList">
-    <img src={{speak.avatarURL}}>
-    <h1>{{speak.username}}</h1>
-    <p>{{speak.messageText}}</p>
-    <button (click)="deleteItem(messageList)">Delete Item</button>
-    <h1>{{Message.username}}</h1> 
-    <app-photo
-        *ngFor="let speak of messageList"
-        [message] = "speak"></app-photo> -->
-<!-- </div>
-
-<div>
-    {{myDate | date: 'medium'}}
-</div> -->
-
-<!-- SEPERATE CHAT COMPONENT THAT WE ARE NOT CURRENTLY USING -->
-<!-- <app-chat></app-chat> -->

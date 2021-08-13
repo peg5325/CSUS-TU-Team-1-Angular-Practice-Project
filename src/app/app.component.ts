@@ -12,6 +12,8 @@ import { MessageService } from './message.service'
 export class AppComponent {
   title = 'team-one-practice';
 
+  myDate= Date.now
+  
   luffy = "assets/luffy.png";
 
   public displayMessages: any[] = [];
@@ -22,8 +24,12 @@ export class AppComponent {
     index : 0
   }
 
+ 
+
   @Output() deleteItemEvent = new EventEmitter<any>();
   constructor(private readonly messageService: MessageService) { }
+
+  
 
   clickChannel(channel: Channel) {
     this.selectedChannel = channel;
@@ -55,6 +61,8 @@ saveMessages(){
   // this will submit your service array data, your array of channels and messages, into localstorage
 
 }
+
+
   ngOnInit() {
     this.fetchMessages(this.selectedChannel.index);
     // this.getMessagesChat(); // part of text chat

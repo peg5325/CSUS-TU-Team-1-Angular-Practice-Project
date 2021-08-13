@@ -2,67 +2,69 @@
   font-style: arial;
 }
 
+
 body {
-    margin: 0;
-  }
-  
-  .container-fluid {
-    height: 100vh;
-  }
+  margin: 0;
+}
 
-  #navigation-items {
-    display: flex;
-    flex-direction: column;
-  }
+.container-fluid {
+  height: 100vh;
+}
 
-  #navigation-col {
-    /* flex: 300px 0 0; */
-    padding-top: 35px;
-    background-color: #dce7ef;
-  }
+#navigation-items {
+  display: flex;
+  flex-direction: column;
+}
+
+#navigation-col {
+  /* flex: 300px 0 0; */
+  padding-top: 35px;
+  background-color: #dce7ef;
+}
+
+.navigation-item:hover {
+  background-color: #c7d2dc;
+  border-radius: 5px;
+}
+
+.chat-container {
+  padding-top: 35px;
+  display: flex;
+  flex-direction: column;
+}
+
+.col-avatar {
+  flex: 50px 0 0;
+  width: 50px;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+.message {
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  margin-top: 15px;
+  background-color: #f6f8f9;
+}
   
-  .navigation-item:hover {
-    background-color: #c7d2dc;
-    border-radius: 5px;
-  }
-  
-  .chat-container {
-    padding-top: 35px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .col-avatar {
-    flex: 50px 0 0;
-    width: 50px;
-  }
-  
-  .avatar {
-    border-radius: 50%;
-  }
-  
-  .message {
-    border: 1px solid #aaa;
-    border-radius: 10px;
-    margin-top: 15px;
-    background-color: #f6f8f9;
-  }
-  
-  #input-container {
-    /* position: fixed; */
-    height: 100px;
-    /* bottom: 0px; */
-    border: 2px solid #aaa;
-    border-radius: 4px;
-    margin-top: 10px;
-    outline: none;
-    /* padding: 15px; */
-    box-sizing: border-box;
-    transition: 0.3s;
-    justify-self: flex-end;
-  }
-  
-  .message-input-row {
+#input-container {
+  /* position: fixed; */
+  height:fit-content;
+  /* bottom: 0px; */
+  border: 2px solid #aaa;
+  background-color: #F6F8F9;
+  border-radius: 4px;
+  margin-top: 10px;
+  outline: none;
+  /* padding: 15px; */
+  box-sizing: border-box;
+  transition: 0.3s;
+  justify-self: flex-end;
+}
+
+.message-input-row {
     align-self: flex-end;
     flex-grow: 2;
     width: 100%;
@@ -73,39 +75,50 @@ body {
   .col-message {
     padding: 0;
   }
+  .col-height{
+    max-height:fit-content;
+  }
   
   .chat-title {
     display: flex;
     align-items: center;
   }
-
+  
   .catagory-name {
     margin: 0;
     font-size: 20px;
     color: black;
   }
-
+  
   .catagory-explain {
     font-size: 20px;
     color: gray;
     margin-left: 12px;
   }
-
- <<<<<<< HEAD 
+  
+  .main-rap{
+    outline: dashed blue;
+  }
+  
+  .pad{
+    padding-top: 0.5in;
+  }
+  /* <<<<<<< HEAD  */
   /*The below code for styling a trash can button came from the fallowing address
     https://codepen.io/msaetre/pen/mAtJF  */
+    
+    .icon-trash {
+      width: 30px;
+      height: 35px;
+      position: relative;
+      overflow: hidden;
+      margin-right: 15px;
+      margin-bottom: 5px;
 
-  .icon-trash {
-    width: 48px;
-    height: 48px;
-    position: relative;
-    overflow: hidden;
-    margin-left: 25px;
-    margin-bottom: 25px;
   }
   
   .icon-trash .trash-lid {
-    width: 62%;
+    width: 60%;
     height: 10%;
     position: absolute;
     left: 50%;
